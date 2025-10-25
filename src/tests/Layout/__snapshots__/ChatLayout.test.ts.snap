@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChatLayout Component > should match the snapshot 1`] = `
+"<div class="bg-gray-100 h-screen flex flex-col max-w-lg mx-auto">
+  <div class="bg-blue-500 p-4 text-white flex justify-between items-center"><span>Mom</span></div>
+</div>"
+`;

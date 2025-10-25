@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChatBubble Component > should match snapshot if sender is false 1`] = `
+"<!-- Example Message -->
+<!-- Example Received Message -->
+<div class="flex">
+  <div class="bg-gray-300 text-black p-2 rounded-lg max-w-xs"><span class="Capitalize">Snapshot test message</span><img src="https://example.com/avatar.png" loading="eager" width="300" height="300" alt="Avatar" class="w-52 h-52 object-cover rounded-md"></div>
+</div>"
+`;
+
+exports[`ChatBubble Component > should match snapshot if sender is true 1`] = `
+"<!-- Example Message -->
+<div class="flex justify-end">
+  <div class="bg-blue-200 text-black p-2 rounded-lg max-w-xs">Snapshot test message</div>
+</div>"
+`;
