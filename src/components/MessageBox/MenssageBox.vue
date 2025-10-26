@@ -7,7 +7,7 @@
       placeholder="Type your message..."
       v-model="message"
       class="flex-1 border rounded-full px-4 py-2 focus:outline-none"
-      @keypress.enter="handleSubmit"
+      @keydown.enter="handleSubmit"
     />
     <button
       title="Send Message"

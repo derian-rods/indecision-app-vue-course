@@ -9,16 +9,32 @@ describe('MessageBox component', () => {
     expect(wrapper.exists()).toBe(true);
   });
 
-  it('should emit message when form is submitted', async () => {
+  it('should emit message when click is button submitted', async () => {
+    const message = 'Test message';
     const input = wrapper.get('input');
-    await input.setValue('Test message');
+    await input.setValue(message);
     const button = wrapper.get('button');
     await button.trigger('click');
 
     const emitted = wrapper.emitted('sendMessage');
     expect(emitted).toBeTruthy();
-    console.log(emitted);
-    expect(emitted?.[0]).toEqual(['Test message']);
+    expect(emitted?.[0]).toEqual([message]);
+  });
+
+  it('should emit message when press enter', async () => {
+    const wrapper = mount(MessageBox);
+
+    const message = 'Hola Mundo';
+
+    const input = wrapper.get('input');
+    await input.setValue(message);
+
+    await input.trigger('keydown.enter');
+
+    const emitted = wrapper.emitted('sendMessage');
+
+    expect(emitted).toBeTruthy();
+    expect(emitted?.[0]).toEqual([message]);
   });
 
   it('should not emit message when input is empty', async () => {
